@@ -21,6 +21,8 @@ default_value_for
     u.last_seen  # => Mon Sep 22 17:28:38 +0200 2008
 
 
+サイト
+-----
 [The Ruby Toolbox: ActiveRecord Default Values](http://ruby-toolbox.com/categories/activerecord_default_values.html)
 
 
