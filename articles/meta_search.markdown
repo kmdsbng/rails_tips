@@ -10,24 +10,24 @@ meta_search
 -----
 * コントローラ
 
-    def index
-      @search = Article.search(params[:search])
-      @articles = @search.all   # load all matching records
-      # @articles = @search.relation # Retrieve the relation, to lazy-load in view
-      # @articles = @search.paginate(:page => params[:page]) # Who doesn't love will_paginate?
-    end
+     def index
+       @search = Article.search(params[:search])
+       @articles = @search.all   # load all matching records
+       # @articles = @search.relation # Retrieve the relation, to lazy-load in view
+       # @articles = @search.paginate(:page => params[:page]) # Who doesn't love will_paginate?
+     end
 
 
 * ビュー
 
-    <%= form_for @search, :url => articles_path, :html => {:method => :get} do |f| %>
-      <%= f.label :title_contains %>
-      <%= f.text_field :title_contains %><br />
-      <%= f.label :comments_created_at_greater_than, 'With comments after' %>
-      <%= f.datetime_select :comments_created_at_greater_than, :include_blank => true %><br />
-      <!-- etc... -->
-      <%= f.submit %>
-    <% end %>
+     <%= form_for @search, :url => articles_path, :html => {:method => :get} do |f| %>
+       <%= f.label :title_contains %>
+       <%= f.text_field :title_contains %><br />
+       <%= f.label :comments_created_at_greater_than, 'With comments after' %>
+       <%= f.datetime_select :comments_created_at_greater_than, :include_blank => true %><br />
+       <!-- etc... -->
+       <%= f.submit %>
+     <% end %>
 
 
 meta_searchにより、モデルにはあらかじめsearchメソッドが定義されます。
@@ -68,7 +68,7 @@ searchメソッドがクエリパラメータを解釈し、scopeを作ります
 
 * 他のscopeと組み合わせられる
 
-    @search = current_user.projects.search(params[:search])
+     @search = current_user.projects.search(params[:search])
 
 * any, all 検索が可能
     <%= f.multiparameter_field :title_contains_any,
