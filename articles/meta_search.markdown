@@ -9,6 +9,7 @@ meta_search
 例
 -----
 * コントローラ
+
     def index
       @search = Article.search(params[:search])
       @articles = @search.all   # load all matching records
@@ -18,6 +19,7 @@ meta_search
 
 
 * ビュー
+
     <%= form_for @search, :url => articles_path, :html => {:method => :get} do |f| %>
       <%= f.label :title_contains %>
       <%= f.text_field :title_contains %><br />
@@ -77,6 +79,7 @@ searchメソッドがクエリパラメータを解釈し、scopeを作ります
 * アソシエーションをたどって検索できる
 
   * モデル
+
     class Company < ActiveRecord::Base
       has_many :developers
     end
@@ -88,12 +91,14 @@ searchメソッドがクエリパラメータを解釈し、scopeを作ります
 
 
   * ビュー
+
     <%= f.text_field :developers_notes_developer_company_name_contains %>
 
 
 * ソート順の指定
 
   * ビュー
+
     <%= f.sort_link :title %>
 
 
