@@ -8,7 +8,7 @@ meta_search
 
 例
 -----
-* コントローラ
+コントローラ
 
      def index
        @search = Article.search(params[:search])
@@ -18,7 +18,7 @@ meta_search
      end
 
 
-* ビュー
+ビュー
 
      <%= form_for @search, :url => articles_path, :html => {:method => :get} do |f| %>
        <%= f.label :title_contains %>
