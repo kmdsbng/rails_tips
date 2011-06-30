@@ -9,11 +9,11 @@ Railsアプリケーションで、簡単にページング機能を実現する
 
 例
 -----
-* コントローラ
+コントローラ
     @posts = Post.paginate :page => params[:page], :per_page => 50
     
 
-* ビュー
+ビュー
     <ol>
       <% for post in @posts -%>
         <li>Render `post` in some nice way.</li>
