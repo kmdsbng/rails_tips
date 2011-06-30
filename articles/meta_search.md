@@ -68,10 +68,12 @@ searchメソッドがクエリパラメータを解釈し、scopeを作ります
 
 
 他のscopeと組み合わせられる
+----
 
      @search = current_user.projects.search(params[:search])
 
 any, all 検索が可能
+----
     <%= f.multiparameter_field :title_contains_any,
           *5.times.inject([]) {|a, b| a << {:field_type => :text_field}} +
           [:size => 10] %>
