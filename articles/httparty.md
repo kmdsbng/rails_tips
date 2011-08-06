@@ -3,7 +3,9 @@ httparty
 
 概要
 ------
-http clientユーティリティです
+http clientユーティリティです。
+json, xml, yaml形式のレスポンスなら、response.parsed_responseには
+パースした結果のハッシュがセットされます。
 
 
 例
