@@ -5,6 +5,8 @@ barista
 ------
 rails, sinatraで CoffeeScript を使うためのプラグインです。
 
+(補足) rails 3.1からは、baristaを使わなくても CoffeeScriptを導入できるようになってます
+
 rails3へのインストール
 -----
 
